@@ -1,0 +1,15 @@
+#! /usr/bin/env bash
+
+set -eu
+
+function main {
+    local s_dir="$(dirname "$(dirname "$(readlink -f "$0")")")"
+    stow --restow \
+      --verbose \
+      --dir=${s_dir}/dotfiles/ \
+      --target=${HOME} \
+      --no-folding \
+      .
+}
+
+main
