@@ -9,6 +9,7 @@ function main {
       --dir=${s_dir}/dotfiles/ \
       --target=${HOME} \
       --no-folding \
+      --dotfiles \
       .
 }
 
